@@ -10,7 +10,7 @@ The project follows all assignment requirements including API structure, redirec
 ## 🚀 Live Demo
 > Add your deployed link here  
 Example:  
-`https://tinylink.onrender.com`
+`https://tinylink-r28x.onrender.com/`
 
 ---
 
