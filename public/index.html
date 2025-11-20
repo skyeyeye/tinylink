@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TinyLink – Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <div class="max-w-3xl mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">TinyLink Dashboard</h1>
+
+    <!-- Create Form -->
+    <div class="bg-white p-4 rounded shadow mb-6">
+      <h2 class="text-lg font-semibold mb-2">Create Short Link</h2>
+
+      <div class="mb-2">
+        <label class="text-sm">Target URL</label>
+        <input id="targetUrl" class="w-full border p-2 rounded" placeholder="https://example.com">
+      </div>
+
+      <div class="mb-2">
+        <label class="text-sm">Custom Code (optional)</label>
+        <input id="customCode" class="w-full border p-2 rounded" placeholder="6–8 chars">
+      </div>
+
+      <button id="createBtn" class="bg-blue-600 text-white px-4 py-2 rounded mt-2">
+        Create
+      </button>
+
+      <p id="formMsg" class="text-sm mt-2 text-red-600"></p>
+    </div>
+
+    <!-- Link List -->
+    <div class="bg-white p-4 rounded shadow">
+      <h2 class="text-lg font-semibold mb-3">All Links</h2>
+
+      <div id="loading">Loading...</div>
+      <div id="empty" class="hidden text-gray-500">No links found.</div>
+
+      <table id="table" class="hidden w-full text-left text-sm">
+        <thead>
+          <tr class="border-b">
+            <th class="py-2">Code</th>
+            <th class="py-2">Target</th>
+            <th class="py-2">Clicks</th>
+            <th class="py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
