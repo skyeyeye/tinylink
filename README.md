@@ -46,7 +46,78 @@ Visiting `/:code`:
 - Updates last clicked time  
 
 ### 🗑 Delete Links
-Users can delete an existing link.  
-After deletion, `/code` → **404 Not Found**
+- Users can delete an existing link.  
+- After deletion, `/code` → **404 Not Found**
+
+### ❤️ Health Check
+Returns:
+```json
+{ "ok": true, "version": "1.0" }
+
+```
+## Clean UI
+- Dashboard to list, create, search, and delete links
+
+- Stats page
+
+- Responsive Tailwind CSS design
+
+- Copy button
+
+- Inline validation
+---
+## Tech Stack
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB Atlas
+
+Mongoose
+
+dotenv
+
+CORS
+
+Frontend
+
+Static HTML
+
+Tailwind CSS (CDN)
+
+Vanilla JavaScript
+
+Deployment
+
+Render / Railway
+
+MongoDB Atlas database
+---
+## Project Structure
+```
+tinylink/
+│
+├── server.js                # Express server
+├── package.json
+├── .gitignore
+├── .env.example
+│
+├── models/
+│   └── Link.js              # Mongoose schema
+│
+├── routes/
+│   ├── links.js             # Create, list, delete, stats
+│   ├── redirect.js          # GET /:code → redirect
+│   └── healthz.js           # GET /healthz
+│
+└── public/
+    ├── index.html           # Dashboard
+    ├── code.html            # Stats page
+    ├── script.js            # Dashboard logic
+    └── stats.js             # Stats page logic
+```
+
 
 
